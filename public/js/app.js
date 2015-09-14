@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 
-var estimates = [
+var ingredients = [
 {name: 'artichoke heart', minutesMin: 10, minutesMax: 10}, // HSW estimate
 {name: 'asparagus, pieces', minutesMin: 5, minutesMax: 5}, // HSW estimate
 {name: 'green beans', minutesMin: 3, minutesMax: 4}, // HSW estimate
@@ -27,10 +27,27 @@ var estimates = [
 
 var CookingTimeline = React.createClass({
   render: function() {
+    var self = this;
+
     return (
       <div className="cookingTimeline">
-        Hello, world! I am a CookingTimeline.
+        <div class="options">
+          {
+            ingredients.map(function(ingredient) {
+              return self.ingredient_checkbox(ingredient);
+            })
+          }
+        </div>
       </div>
+    );
+  },
+
+  ingredient_checkbox: function(ingredient) {
+    var element_id = ingredient.name.replace( /(\s+,?)|(\s*,)/, '-' );
+    return (
+      <label for="{element_id}">
+        <input id="{element_id}" type="checkbox" />{ingredient.name}
+      </label>
     );
   }
 });
