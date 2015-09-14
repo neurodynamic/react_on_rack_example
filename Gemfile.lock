@@ -4,6 +4,7 @@ GEM
     daemons (1.2.3)
     eventmachine (1.0.8)
     rack (1.6.4)
+    sass (3.4.18)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -14,4 +15,8 @@ PLATFORMS
 
 DEPENDENCIES
   rack
+  sass
   thin
+
+BUNDLED WITH
+   1.10.6
