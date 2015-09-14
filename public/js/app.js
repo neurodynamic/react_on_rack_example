@@ -1,1 +1,1 @@
-alert("hey there a third and final time!");
+$('body').append('<h1>hi a third time</h1>')
