@@ -25,17 +25,17 @@ var estimates = [
 {name: 'turnips, cubed', minutesMin: 2, minutesMax: 3} // HSW estimate
 ];
 
-var CommentBox = React.createClass({
+var CookingTimeline = React.createClass({
   render: function() {
     return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
+      <div className="cookingTimeline">
+        Hello, world! I am a CookingTimeline.
       </div>
     );
   }
 });
 
 React.render(
-  <CommentBox />,
+  <CookingTimeline />,
   document.getElementById('content')
 );
