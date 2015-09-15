@@ -2,3 +2,4 @@ manifest.yml
 .sass-cache
 app.css*
 index.html
+.DS_Store
