@@ -6,6 +6,15 @@ body
   min-height: 100vh
   flex-direction: column
 
+header
+  text-align: center
+  background-color: lightblue
+  padding: 20px 40px 10px
+
+  h1
+    margin: 0
+
+
 main
   flex: 1 1 auto
   padding: 12px
@@ -21,9 +30,23 @@ main
 
     li
       padding: 3px 6px
-      max-width: 120px
+      max-width: 140px
+      word-break: break-word
+
+      input[type="checkbox"]+label
+        font-size: 17px
 
 
 footer
-  padding: 12px
+  background-color: lightblue
+  padding: 20px
+  font-size: 17px
 
+  a
+    color: black
+
+    &:hover
+      text-decoration: underline
+
+    &:visited
+      color: black
