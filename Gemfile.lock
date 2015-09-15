@@ -1,8 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    autoprefixer-rails (6.0.2)
+      execjs
+      json
     daemons (1.2.3)
     eventmachine (1.0.8)
+    execjs (2.6.0)
+    json (1.8.3)
     rack (1.6.4)
     sass (3.4.18)
     thin (1.6.3)
@@ -14,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   rack
   sass
   thin
