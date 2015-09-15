@@ -1,6 +1,7 @@
 require 'sass/plugin/rack'
 require "autoprefixer-rails"
 require "slim"
+require 'fileutils'
 
 class ToPrefixed
   def initialize(app)
@@ -51,6 +52,8 @@ use Rack::Static,
   :root => "public"
 
 run lambda { |env|
+  FileUtils.touch('public/index.html')
+  
   [
     200,
     {
