@@ -31,13 +31,13 @@ var CookingTimeline = React.createClass({
 
     return (
       <div className="cookingTimeline">
-        <div class="options">
+        <ul className="ingredients">
           {
             ingredients.map(function(ingredient) {
-              return self.ingredient_checkbox(ingredient);
+              return <li key={ingredient.name}>{self.ingredient_checkbox(ingredient)}</li>;
             })
           }
-        </div>
+        </ul>
       </div>
     );
   },
@@ -45,8 +45,8 @@ var CookingTimeline = React.createClass({
   ingredient_checkbox: function(ingredient) {
     var element_id = ingredient.name.replace( /(\s+,?)|(\s*,)/, '-' );
     return (
-      <label for="{element_id}">
-        <input id="{element_id}" type="checkbox" />{ingredient.name}
+      <label htmlFor={element_id}>
+        <input id={element_id} type="checkbox" />{ingredient.name}
       </label>
     );
   }
