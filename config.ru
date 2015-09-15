@@ -1,5 +1,6 @@
 require 'sass/plugin/rack'
 require "autoprefixer-rails"
+require "slim"
 
 class ToPrefixed
   def initialize(app)
@@ -21,11 +22,29 @@ class ToPrefixed
   end
 end
 
+class SlimToHTML
+  def initialize(app)
+    @app = app
+  end
+ 
+  def call(env)
+    status, headers, body  = @app.call(env)
+ 
+    html = Slim::Template.new('public/index.slim').render
+
+    File.open('public/index.html', "wb") do |file|
+      file.write(html)
+    end
+
+    [status, headers, body]
+  end
+end
+
 
 
 use Sass::Plugin::Rack
-
 use ToPrefixed
+use SlimToHTML
 
 use Rack::Static,
   :urls => ["/images", "/js", "/stylesheets"],
