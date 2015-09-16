@@ -1,5 +1,13 @@
 /** @jsx React.DOM */
 
+
+$(document).ready(function(){
+  $('a.eat').on('click', function () {
+    Materialize.toast('Hooray eating!', 4000);
+  });
+});
+
+
 // Values with .5 in them adapted from values with same max and min.
 // This helps keep them visible on the chart.
 var ingredients = [
@@ -34,6 +42,7 @@ var CookingTimeline = React.createClass({
 
     return (
       <div className="cookingTimeline">
+      <h2>Ingredients</h2>
       <ul className="ingredients" onChange={this.renderChart}>
       {
         ingredients.map(function(ingredient) {

@@ -6,25 +6,27 @@ body
   min-height: 100vh
   flex-direction: column
 
-header
-  text-align: center
-  background-color: lightblue
-  padding: 20px 40px 10px
-
-  h1
-    margin: 0
-
-
 main
   flex: 1 1 auto
   padding: 12px
 
+  .card
+    border-radius: 20px
+
+  #content
+    h2
+      text-align: center
+      font-size: 24px
+  
+  #container
+    padding: 30px 60px
 
   ul.ingredients
     list-style: none
     display: flex
     flex-direction: column
-    height: 250px
+    height: calc(750px - 100vw/2)
+    min-height: 225px
     flex-wrap: wrap
     align-content: center
 
@@ -38,18 +40,18 @@ main
 
 
 footer
-  background-color: lightblue
   display: flex
   padding: 20px
   align-items: center
   text-align: center
+  color: white
 
   p
     font-size: 14px
     padding: 0 50px
 
   a
-    color: black
+    color: white
     min-width: 200px
     font-size: 17px
     padding: 0 10px
@@ -58,4 +60,4 @@ footer
       text-decoration: underline
 
     &:visited
-      color: black
+      color: white

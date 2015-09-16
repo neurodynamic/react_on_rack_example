@@ -7,17 +7,25 @@ html
   body
     .page-flexbox-wrapper
       header
-        h1 Stir Fry Planner
-        p Select the things you'd like to add and the chart below will plan out when to add each item to your delicious, delicious stir fry recipe*.
-      main
-        #content
-        #container
+        nav
+          .nav-wrapper.container
+            a.brand-logo
+              Stir Fry Planner
 
-      footer
+            ul#nav-mobile.right.hide-on-med-and-down
+              li
+                a href='#content' 1. Select ingredients
+              li
+                a href='#container' 2. Follow plan*
+              li
+                a.eat href='#' 3. Eat
+      main
+        #content.flow-text.card
+        #container.card
+
+      footer.page-footer
         a.copyright href="http://www.neurodynamic.io"  &copy; Neurodynamic 2015
-        p
-          strong * Actual times will vary based on many factors including how many things you're adding in the first place. 
-          | Bear in mind I wrote this largely because I am still sufficiently bad at stir-frying estimates that I needed this tool myself, so if your gut tells you I'm wrong, trust it.
+        p * Actual times will vary based on many factors including how many things you're adding in the first place.
 
     script src="http://code.jquery.com/jquery-2.1.4.min.js" 
     script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js" 
