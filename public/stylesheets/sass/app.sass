@@ -5,13 +5,17 @@ body
   display: flex
   min-height: 100vh
   flex-direction: column
+  background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url('/images/stir_fry.jpg') repeat 0 0
 
 main
   flex: 1 1 auto
   padding: 12px
+  background-color: transparent
 
   .card
     border-radius: 20px
+    margin: 10px 10px 20px
+    background-color: rgba(white,0.8)
 
   #content
     h2
@@ -20,6 +24,9 @@ main
   
   #container
     padding: 30px 60px
+
+    rect.highcharts-background
+      fill: rgba(white,0)
 
   ul.ingredients
     list-style: none
@@ -45,6 +52,7 @@ footer
   align-items: center
   text-align: center
   color: white
+  background-color: transparent
 
   p
     font-size: 14px
