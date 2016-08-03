@@ -4,4 +4,4 @@ I wanted to learn some React, and to see how little memory I could make a Rack a
 
 Should serve as a good example for how to add sass, slim, and autoprefixer functionality to a basic Rack app. Also as an example of really basic React use (from a mostly Ruby dev).
 
-Static version deployed at http://stir-fry-planner.surge.sh
+Static version deployed at http://stirfryplanner.surge.sh
